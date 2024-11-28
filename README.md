@@ -23,7 +23,36 @@
    git clone https://github.com/yourusername/agentX.git
    cd agentX
    
-2. **Try to compile to jar file**:
+2. **Try to compile to jar file**
 ```bash
     pray to intellij
+```
+
+3. **Import jar**
+```bash
+    use the jar file and import it as a dependancy
+```
+
+## Driver Code
+put this your main function method
+
+```java
+    public static void main(String[] args){
+         agentXXX agentX = new agentXXX();
+         String args[1] = "your_api_key_here"; 
+         boolean isAuthorized = agentX.callApi(apiKey);
+         if (isAuthorized) {
+            System.out.println("Authorization successful. Continuing execution...");
+        } else {
+            System.out.println("Authorization failed. Stopping execution.");
+            System.exit(1); // Exit the program with an error code
+        }
+
+         //rest of program
+   }
+
+
+```
+         
+
     
