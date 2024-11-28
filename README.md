@@ -37,6 +37,8 @@
 put this your main function method
 
 ```java
+    import org.agentX.agentXXX
+
     public static void main(String[] args){
          agentXXX agentX = new agentXXX();
          String args[1] = "your_api_key_here"; 
