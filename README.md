@@ -25,14 +25,14 @@
    
 2. **Try to compile to jar file**
 ```bash
-    pray to intellij
+pray to intellij
     OR
-    mvn package
-    mvn clean package
+mvn package
+mvn clean package
 ```
 
 3. **Import jar**
-```bash
+```text
     use the jar file and import it as a dependancy
 ```
 
@@ -40,23 +40,34 @@
 put this your main function method
 
 ```java
-    import org.agentX.agentXXX
-
-    public static void main(String[] args){
-         agentXXX agentX = new agentXXX();
-         String args[1] = "your_api_key_here"; 
-         boolean isAuthorized = agentX.callApi(apiKey);
-         if (isAuthorized) {
-            System.out.println("Authorization successful. Continuing execution...");
+import org.agentX.agentXXX
+public static void main(String[] args){
+   agentXXX agentX = new agentXXX();
+   String args[1] = "your_api_key_here"; 
+   boolean isAuthorized = agentX.callApi(apiKey);
+   if (isAuthorized) {
+      System.out.println("Authorization successful. Continuing execution...");
         } else {
-            System.out.println("Authorization failed. Stopping execution.");
-            System.exit(1); // Exit the program with an error code
-        }
+      System.out.println("Authorization failed. Stopping execution.");
+      System.exit(1); // Exit the program with an error code
+}
+   //rest of program
+}
 
-         //rest of program
-   }
 
+```
 
+## Maven setup:
+pom.xml
+
+```xml
+<dependency>
+   <groupId>org.agentX</groupId>
+   <artifactId>agentXXX</artifactId>
+   <version>1.0</version>
+   <scope>system</scope>
+   <systemPath>${project.basedir}/lib/agentX.jar</systemPath>
+</dependency>
 ```
          
 
