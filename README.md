@@ -26,6 +26,9 @@
 2. **Try to compile to jar file**
 ```bash
     pray to intellij
+    OR
+    mvn package
+    mvn clean package
 ```
 
 3. **Import jar**
