@@ -28,7 +28,7 @@ public class agentXXX {
 
     try {
 
-      String urlString = "http://ip_addr:8080/api/" + apiKey;
+      String urlString = "http://projectxsucks.duckdns.org/api/" + apiKey;
       URL url = new URL(urlString);
 
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
